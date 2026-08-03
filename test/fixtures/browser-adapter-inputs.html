@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Browser adapter input regression</title>
+  </head>
+  <body>
+    <label for="date">Date</label>
+    <input id="date" name="date" type="date">
+    <output id="date-output"></output>
+
+    <label for="time">Time</label>
+    <input id="time" name="time" type="time">
+    <output id="time-output"></output>
+
+    <button id="keyboard-button" type="button">Keyboard target</button>
+    <output id="click-output">0</output>
+
+    <script>
+      for (const id of ["date", "time"]) {
+        const input = document.querySelector(`#${id}`);
+        const output = document.querySelector(`#${id}-output`);
+        const update = () => {
+          output.value = input.value;
+        };
+        input.addEventListener("input", update);
+        input.addEventListener("change", update);
+      }
+
+      const button = document.querySelector("#keyboard-button");
+      const clicks = document.querySelector("#click-output");
+      button.addEventListener("click", () => {
+        clicks.value = String(Number(clicks.value) + 1);
+      });
+    </script>
+  </body>
+</html>

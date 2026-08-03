@@ -1,0 +1,28 @@
+{
+  "name": "frontend-accelerator-toolset",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Frontend-native agent workflow toolset with a pinned runtime toolchain for existing TypeScript repositories.",
+  "type": "module",
+  "bin": {
+    "frontend-accelerator": "./bin/frontend-accelerator.mjs"
+  },
+  "files": [
+    ".claude",
+    ".agents",
+    "rulesets",
+    "toolchain",
+    "bin",
+    "lib",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "sync:agents": "node ./scripts/sync-agents.mjs",
+    "check:agents": "node ./scripts/sync-agents.mjs --check",
+    "test": "node --test",
+    "check": "npm test && npm run check:agents"
+  }
+}
