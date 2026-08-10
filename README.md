@@ -4,6 +4,10 @@ A frontend-native agent workflow and pinned Runtime Toolchain for existing TypeS
 
 This is not a React starter, project generator, orchestrator, governance pipeline, backend workflow, or global CLI bundle. React is only the default Framework Ruleset and can be replaced.
 
+## Training
+
+All onboarding and assessment materials live under [`training/`](training/README.md). New participants should start from that single entry point.
+
 ## Prerequisites
 
 - Node.js 24 or newer for the accelerator CLI and managed tools. The target application may declare an older Node.js range.
