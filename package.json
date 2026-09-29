@@ -22,7 +22,7 @@
   "scripts": {
     "sync:agents": "node ./scripts/sync-agents.mjs",
     "check:agents": "node ./scripts/sync-agents.mjs --check",
-    "test": "node --test",
+    "test": "node --test test/*.test.mjs",
     "check": "npm test && npm run check:agents"
   }
 }
